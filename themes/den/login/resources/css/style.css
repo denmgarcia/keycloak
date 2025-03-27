@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --green-50: #ecfdf5;
+    --green-100: #d1fae5;
+    --green-200: #a7f3d0;
+    --green-300: #6ee7b7;
+    --green-400: #34d399;
+    --green-500: #10b981;
+    --green-600: #059669;
+    --green-700: #047857;
+    --green-800: #065f46;
+    --green-900: #064e3b;
+    --green-950: #022c22;
+  
+    --primary: var(--green-500);
+    --primary-hover: var(--green-600);
+    --primary-active: var(--green-700);
+    --primary-light: var(--green-200);
+    --primary-dark: var(--green-900);
+  }
+
+* {
+    font-family: "Barlow", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    font-style: normal;
+}
+  
+
+.login-pf body {
+    background: url("../img/kalikasan.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+.custom-card-pf {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    
+    box-shadow: 0 0 0;
+}
+
+#kc-header-wrapper {
+    color: black;
+
+}
+
+.kc-logo-text  span {
+    size: 90%;
+}
+
+.pf-c-button.pf-m-primary {
+    background-color: var(--green-500);
+}
+
+.pf-c-form-control {
+    /* border-radius: 90%; */
+}

@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keycloak
+  labels:
+    app: keycloak
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keycloak
+  template:
+    metadata:
+      labels:
+        app: keycloak
+    spec:
+      containers:
+      - name: keycloak
+        image: cyborden/keycloak:0.0.5
+        ports:
+        - containerPort: 8082
+        env:
+          - name: KC_DB_USERNAME
+            value: "keycloak"
+          - name: KC_DB_PASSWORD
+            value: "keycloak"
+          - name: KC_HTTP_PORT
+            value: "8082"  # ✅ Change Keycloak's internal port
+          - name: KC_DB_URL
+            value: "jdbc:mysql://keycloak-mysql:3306/keycloak?allowPublicKeyRetrieval=true&useSSL=false"
+          - name: KC_DB_URL_PORT
+            value: "3306"
+          - name: KC_DB
+            value: "mysql"
+            
